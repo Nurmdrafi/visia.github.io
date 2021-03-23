@@ -1,0 +1,712 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    /*16px = 100% -So- 10px = 62.5%*/
+
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    
+
+}
+
+/*====================*/
+/*REUSEABLE COMPONENT*/
+/*====================*/
+h2 {
+    font-size: 3.5rem !important;
+    font-weight: 100 !important;
+    text-align: center;
+    color: #000;
+    padding-top: 6.5rem;
+    padding-bottom: 4rem;
+}
+
+h2:after {
+    content: '';
+    display: block;
+    background: #000;
+    width: 8.5rem;
+    height: .2rem;
+    margin: 1rem auto;
+
+}
+
+h4 {
+    font-size: 1.5rem !important;
+    text-align: center;
+}
+
+.container-fluid {
+    padding: 0 !important;
+    
+}
+
+/*====================*/
+/*Header*/
+/*====================*/
+
+#header{
+    
+    
+}
+.navbar {
+    font-size: 1.3rem;
+
+}
+
+.navbar-brand img {
+    width: 10rem;
+}
+
+.nav-link {
+    margin-right: 1.5rem;
+}
+
+.nav-link:hover {
+    color: #ee3b16 !important;
+}
+
+.active {
+    color: #ee3b16 !important;
+}
+
+/*====================*/
+/*Header-Hero*/
+/*====================*/
+
+#header-hero .container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+#header-hero {
+    background-image: url(img/hero.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 93vh;
+    background-attachment: fixed;
+    position: relative;
+    letter-spacing: .3rem;
+
+}
+
+
+#header-hero .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    width: 70%;
+    text-align: center;
+
+}
+
+#header-hero .box h1 {
+    font-size: 6rem;
+    font-weight: 200;
+    padding: 4rem 0;
+
+
+}
+
+/*===========*/
+/*Slider*/
+/*===========*/
+
+
+#sentence {
+    overflow: hidden;
+    text-align: left;
+    margin-left: 15.5rem;
+    margin-bottom: 5rem;
+}
+
+#sentence > li {
+    display: inline;
+}
+
+#textSlider {
+    overflow: visible !important;
+    display: inline;
+    position: relative;
+    font-size: 4.3rem;
+    font-weight: 200;
+    padding-top:6rem;
+    letter-spacing: .5rem;
+    
+    
+
+
+}
+
+.adj {
+    white-space: nowrap;
+    list-style: none;
+    position: absolute;
+    line-height: 5.5rem;
+    -webkit-transform: translateY(60px);
+    -moz-transform: translateY(60px);
+    transform: translateY(60px);
+}
+
+.slide-in {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+}
+
+.slide-out {
+    -webkit-transform: translateY(-60px);
+    -moz-transform: translateY(-60px);
+    transform: translateY(-60px);
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+}
+
+/*===========*/
+/*Slider*/
+/*===========*/
+#header-hero .box {
+position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%;);
+    width:50%
+    
+}
+
+#header-hero .box button {
+    font-size: 2rem;
+    padding: 1rem;
+    color: #fff;
+    background-color: transparent;
+    border: .2rem solid;
+    margin: auto;
+
+}
+
+#header-hero .box span {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+#header-hero .box i {
+    font-size: 2.7rem;
+
+}
+
+/*====================*/
+/*About US*/
+/*====================*/
+
+.sub-headline {
+    display: block;
+    margin: 0 auto;
+    width: 60rem;
+    font-size: 1.4rem;
+    text-align: center;
+
+
+}
+
+#about-us p {
+    text-align: center;
+    font-size: 1.5rem;
+    max-width: 62rem;
+    display: block;
+    margin: auto;
+
+}
+
+#about-us img {
+    display: block;
+    margin: auto;
+    overflow: hidden;
+}
+
+/*====================*/
+/*Services*/
+/*====================*/
+
+#services {
+    background-image: url(img/services-red.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    background-attachment: fixed;
+    padding-bottom: 5rem;
+    color: #fff;
+    background-position: center;
+    position: relative;
+
+
+}
+
+#services h2 {
+    color: #fff
+}
+
+#services h2:after {
+    content: '';
+    background: #fff;
+}
+
+
+#services p {
+    text-align: center;
+    font-size: 1.5rem;
+    max-width: 62rem;
+    display: block;
+    margin: auto;
+}
+
+#services .icons img {
+    padding: 4rem;
+}
+
+#services .icons .ux img:hover {
+    content: url(img/icons/ux-bottom.png)
+}
+
+#services .icons .design img:hover {
+    content: url(img/icons/design-bottom.png)
+}
+
+#services .icons .seo img:hover {
+    content: url(img/icons/seo-bottom.png)
+}
+
+#services .icons .social img:hover {
+    content: url(img/icons/social-bottom.png)
+}
+
+#services .icons .tech img:hover {
+    content: url(img/icons/tech-bottom.png)
+}
+
+#services .icons .commerce img:hover {
+    content: url(img/icons/commerce-bottom.png)
+}
+
+#services .icons h4 {
+    color: #fff;
+
+
+}
+
+#services .icons i:hover {
+    background: #fff;
+    color: #EA4724;
+}
+
+/*====================*/
+/*Folio*/
+/*====================*/
+
+
+/* ---- button ---- */
+
+.button {
+    display: inline-block;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    font-style: italic;
+
+
+}
+
+.button:hover {
+    color: #ea4724;
+}
+
+.button.is-checked {
+    color: #ea4724;
+}
+
+.button-group p {
+    font-size: 1.5rem;
+}
+
+/* ---- isotope ---- */
+
+.grid-item {
+    width: 25%;
+
+}
+
+.grid-item:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.grid-item img:hover {
+
+    opacity: 0;
+    background-color: red;
+}
+
+.grid-item .text {
+    text-align: center;
+    padding: 2rem 0
+}
+
+.grid-item h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+}
+
+.grid-item p {
+    font-size: 1rem;
+    font-style: italic;
+
+}
+
+
+/*====================*/
+/*Team*/
+/*====================*/
+
+#team .container {
+    padding: 0 17rem;
+}
+
+#team img {
+    width: 100rem;
+    display: block;
+    margin: auto;
+
+}
+
+#team em {
+    font-size: 1.4rem;
+}
+
+#team p {
+    font-size: 1.6rem;
+}
+
+#team .social i {
+    font-size: 1.8rem;
+    margin: 0 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    text-align: center;
+    line-height: 3.4rem;
+    border-radius: 50%;
+    border: .2rem solid #c0c0c0;
+    color: #c0c0c0;
+}
+
+#team .social i:hover {
+    color: #000;
+    border: .2rem solid #000;
+}
+
+/*====================*/
+/*Clients*/
+/*====================*/
+
+#clients {
+    background-image: url(img/clients.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    background-attachment: fixed;
+    color: #fff;
+    position: relative;
+
+}
+
+#clients h2 {
+    color: #fff
+}
+
+#clients h2:after {
+    content: '';
+    background: #fff;
+}
+
+#clients .caption {
+    padding: 0 42rem;
+}
+
+/* Caption text */
+.caption {
+    color: #f2f2f2;
+    position: absolute;
+    bottom: 4rem;
+    width: 100%;
+    text-align: center;
+
+
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: forwards;
+    /* Makes it stay after animation */
+
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.caption h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+
+
+}
+
+.caption p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #828282;
+}
+
+
+/* Next & previous buttons */
+.prev {
+    cursor: pointer;
+    position: absolute;
+    bottom: 10rem;
+    padding: 0 30rem;
+    width: auto;
+    color: white;
+    font-weight: ;
+    font-size: 5rem;
+
+
+}
+
+.next {
+    cursor: pointer;
+    position: absolute;
+    bottom: 10rem;
+    padding: 0 30rem;
+    width: auto;
+    color: white;
+    font-weight: ;
+    font-size: 5rem;
+
+
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+
+.slide-head {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.slide-head .active {
+    opacity: 1;
+}
+
+.dot {
+    padding: 1rem;
+    opacity: .4
+}
+
+.dot:hover {
+    opacity: 1;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+}
+
+
+/*=================*/
+/*Footer*/
+/*=================*/
+
+#footer {
+    background: #000;
+    text-align: center;
+}
+
+#footer .contact {
+    color: #828282;
+    padding: 6rem 20rem;
+
+}
+
+.contact i {
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+    color: #828282;
+
+}
+
+.contact h5 {
+    font-size: 1.5rem;
+    font-weight: 400 !important;
+    color: #828282;
+}
+
+.social span {
+    padding: 1rem;
+}
+
+.social i {
+    font-size: 1.8rem;
+    color: #fff;
+    width: 4rem;
+    height: 4rem;
+    border: .2rem solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 3.6rem;
+}
+
+.copyright {
+    color: #fff;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+}
+
+.copyright h5 {
+    font-weight: 400 !important;
+    letter-spacing: .3rem;
+    color: #828282;
+}
+
+
+
+/*Top popup*/
+
+.popup .popup-text {
+  width: 12rem;
+  bottom: 100%;
+  left: 12%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the popup */
+}
+/*Bottom Arrow*/
+.popup .popup-text::after{
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the popup */
+  left: 50%;
+  margin-left: -.8rem;
+  border-width: .8rem;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/*Fade In popups (Animation)*/
+
+.popup .popup-text {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.popup:hover .popup-text {
+  opacity: .8;
+}
+
+/*Essential Elements for popup*/
+
+.popup {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.popup .popup-text {
+  visibility: hidden;
+  width: 23rem;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: .3rem;
+
+  /* Position the popup */
+  position: absolute;
+  z-index: 1;
+  bottom:15rem;
+
+  
+}
+
+.popup:hover .popup-text {
+  visibility: visible;
+  padding-bottom:.2rem;
+}
+.popup-text ul {
+  list-style: none;
+  text-align:left;
+font-size:1.5rem;
+    padding-top: .8rem;
+    
+    
+}
+.popup-text ul li::before {
+color: black;
+content: "\2022";
+color: red;
+font-size:3rem;
+padding-right:.5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.popup-text ul li{
+display:flex;
+align-items: center;
+line-height: .7;
+    font-style: italic;
+
+}

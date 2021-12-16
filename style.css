@@ -28,19 +28,19 @@ img {
   max-width: 100%;
 }
 
-/*=====================*/
-/* REUSEABLE COMPONENT */
-/*=====================*/
+/*=================
+REUSEABLE COMPONENT
+==================*/
 section {
   overflow: hidden;
 }
 .container {
-  max-width: 1480px;
+  min-width: 1480px;
   width: 90%;
   margin: 0 auto;
 }
 .container-fluid {
-  /* max-width: 1480px; */
+  /*max-width: 1480px; */
   width: 100%;
   margin: 0 auto;
 }
@@ -68,9 +68,10 @@ h4 {
   text-align: center;
 }
 
-/*========*/
-/* Header */
-/*========*/
+/*=================
+      Header
+==================*/
+
 #preloader {
   background-color: var(--white);
   position: fixed;
@@ -122,9 +123,9 @@ h4 {
   color: var(--orange);
 }
 
-/*=============*/
-/* Header-Hero */
-/*=============*/
+/*=================
+    Header Hero
+==================*/
 #header {
   position: sticky;
   top: 0;
@@ -168,9 +169,9 @@ h4 {
   right: 0;
   top: 0;
 }
-/*========*/
-/* Slider */
-/*========*/
+/*=================
+      Slider
+==================*/
 
 .text-slider {
   max-width: 100%;
@@ -212,9 +213,9 @@ h4 {
   bottom: -5px;
 }
 
-/*==========*/
-/* About US */
-/*==========*/
+/*=================
+    About Us
+==================*/
 
 .sub-headline {
   display: block;
@@ -236,9 +237,9 @@ h4 {
   overflow: hidden;
 }
 
-/*==========*/
-/* Services */
-/*==========*/
+/*=================
+      Services
+==================*/
 
 #services {
   background-image: url(img/services-red.jpg);
@@ -404,9 +405,9 @@ h4 {
   font-style: italic;
 }
 
-/*=======*/
-/* Folio */
-/*=======*/
+/*=================
+      Folio
+==================*/
 
 /* button */
 
@@ -464,9 +465,9 @@ h4 {
   font-style: italic;
 }
 
-/*======*/
-/* Team */
-/*======*/
+/*=================
+        Team
+==================*/
 #team {
   text-align: center;
 }
@@ -515,9 +516,9 @@ h4 {
   border: 0.2rem solid var(--black);
 }
 
-/*=========*/
-/* Clients */
-/*=========*/
+/*=================
+      Clients
+==================*/
 
 #clients {
   background-image: url(img/clients.jpg);
@@ -636,9 +637,9 @@ h4 {
   margin-right: 5rem;
 }
 
-/*========*/
-/* Footer */
-/*========*/
+/*=================
+      Footer
+==================*/
 
 #footer {
   background: var(--black);
@@ -693,9 +694,9 @@ h4 {
   letter-spacing: 0.3rem;
   color: var(--gray);
 }
-/*=============*/
-/* Media Quary */
-/*=============*/
+/*=================
+  Media Quaries
+==================*/
 
 @media (max-width: 575px) {
   .text-slider {
@@ -769,4 +770,17 @@ h4 {
   .next {
     display: inline-block;
   }
+}
+
+@media screen and (min-width: 1920px) {
+/*For Projectors or Higher Resolution Screens (Full HD)*/
+    .container {
+        width: 1890px;
+    }
+}
+@media screen and (min-width: 3840px) {
+/*For 4K Displays (Ultra HD)*/
+    .container {
+        width: 3810px;
+    }
 }

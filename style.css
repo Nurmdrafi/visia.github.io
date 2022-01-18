@@ -433,11 +433,36 @@ h4 {
   color: var(--orange);
 }
 
-.button-group p {
+.button-group span {
   font-size: 1.5rem;
 }
 
-/* isotope */
+.gallery{
+  width: 100%;
+  display: block;
+  /* min-height: 100vh; */
+  background-color: #2a2932;
+  padding: 100px 0;
+}
+
+.gallery-filter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-filter span{
+  color: var(--orange);
+  font-size: 17px;
+}
+.gallery .gallery-filter .filter-item{
+  font-size: 17px;
+  margin-right: 8px;
+  cursor: pointer;
+  padding: 8px 20px 8px 20px;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+}
+
 
 .grid-item {
 }

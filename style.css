@@ -437,58 +437,74 @@ h4 {
   font-size: 1.5rem;
 }
 
-.gallery{
+.gallery {
   width: 100%;
   display: block;
-  /* min-height: 100vh; */
-  background-color: #2a2932;
   padding: 100px 0;
 }
 
-.gallery-filter{
+.button-group {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 50px;
 }
-.gallery-filter span{
+
+.filter-item, .button-group span {
   color: var(--orange);
   font-size: 17px;
-}
-.gallery .gallery-filter .filter-item{
-  font-size: 17px;
-  margin-right: 8px;
   cursor: pointer;
-  padding: 8px 20px 8px 20px;
-  line-height: 1.2;
+  /* line-height: 1.2; */
   transition: all 0.3s ease;
+  padding: 10px;
+}
+.filter-item.active {
+  color: var(--black);
+}
+.gallery-items{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-
-.grid-item {
-}
-.grid-item img {
-
-}
-.grid-item:hover img {
-  opacity: 0.7;
+.gallery-item:hover img {
   cursor: crosshair;
   cursor: url('./img/more.png'), default;
 }
+.gallery-item .gallery-item-inner:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
 
-.grid-item .text {
+.gallery-item .text {
   text-align: center;
   padding: 2rem 1rem;
 }
 
-.grid-item h3 {
+.gallery-item h3 {
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
 }
 
-.grid-item p {
+.gallery-item p {
   font-size: 1.3rem;
   font-style: italic;
+}
+
+.gallery .gallery-item.show{
+	animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.gallery .gallery-item.hide{
+	display: none;
 }
 
 /*=================
@@ -740,7 +756,7 @@ h4 {
   .navbar {
     flex-direction: row;
   }
-  .grid-item {
+  .gallery-items {
     grid-template-columns: repeat(2, 1fr);
   }
   #services .icons-wrapper {
@@ -768,7 +784,7 @@ h4 {
     grid-template-rows: repeat(3, auto);
     justify-content: space-around;
   }
-  .grid-item {
+  .gallery-items {
     grid-template-columns: repeat(3, 1fr);
   }
   .slide-head {
@@ -788,10 +804,9 @@ h4 {
     grid-template-columns: repeat(6, 90px);
     justify-content: space-around;
   }
-  .grid-item {
+  .gallery-items {
     grid-template-columns: repeat(4, 1fr);
   }
-
   .prev,
   .next {
     display: inline-block;

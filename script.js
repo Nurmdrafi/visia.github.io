@@ -1,50 +1,3 @@
-/// AOS JS /// ==>
-
-AOS.init();
-
-/// CLIENT SLIDE SHOW /// ==>
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName('mySlides');
-  var dots = document.getElementsByClassName('dot');
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(' active', '');
-  }
-  slides[slideIndex - 1].style.display = 'block';
-  dots[slideIndex - 1].className += ' active';
-}
-
-/// TEXT SLIDER /// ==>
-
-var swiper = new Swiper('.text-slider', {
-  direction: 'vertical',
-  autoplay: {
-    delay: 1800,
-  },
-});
 
 /// Preloader /// ==>
 
@@ -56,7 +9,7 @@ $(window).on('load', function () {
 /// Smooth scrolling /// ==>
 
 $('nav a').on('click', function () {
-  var scrollAnchor = $(this).attr('data-scroll'),
+  const scrollAnchor = $(this).attr('data-scroll'),
     scrollPoint =
       $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 65;
 
@@ -73,7 +26,7 @@ $('nav a').on('click', function () {
 /// Navigation change on scroll /// ==>
 
 $(window).scroll(function () {
-  var windscroll = $(window).scrollTop();
+  let windscroll = $(window).scrollTop();
   if (windscroll >= 0) {
     //This value must be "0" for active #Home by default//
     $('.wrapper section').each(function (i) {
@@ -87,3 +40,84 @@ $(window).scroll(function () {
     $('.navbar-nav a:first').addClass('active');
   }
 });
+
+/// TEXT SLIDER /// ==>
+
+const swiper = new Swiper('.text-slider', {
+  direction: 'vertical',
+  autoplay: {
+    delay: 1800,
+  },
+});
+
+/// GALLERY FILTER /// ==>
+
+const filterContainer = document.querySelector(".gallery-filter");
+const galleryItems = document.querySelectorAll(".gallery-item");
+
+filterContainer.addEventListener("click", (event) =>{
+  if(event.target.classList.contains("filter-item")){
+
+    // deactivate existing active 'filter-item'
+    filterContainer.querySelector(".active").classList.remove("active");
+
+    // activate new 'filter-item'
+    event.target.classList.add("active");
+
+    const filterValue = event.target.getAttribute("data-filter");
+
+    galleryItems.forEach((item) =>{
+
+      if(item.classList.contains(filterValue) || filterValue === 'all'){
+        item.classList.remove("hide");
+         item.classList.add("show");
+      }
+
+      else{
+        item.classList.remove("show");
+        item.classList.add("hide");
+      }
+
+     });
+  }
+});
+
+
+/// CLIENT SLIDE SHOW /// ==>
+
+const slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let i;
+  const slides = document.getElementsByClassName('mySlides');
+  const dots = document.getElementsByClassName('dot');
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(' active', '');
+  }
+  slides[slideIndex - 1].style.display = 'block';
+  dots[slideIndex - 1].className += ' active';
+}
+
+/// AOS JS /// ==>
+
+AOS.init();

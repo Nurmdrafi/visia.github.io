@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 img {
   max-width: 100%;
@@ -55,7 +55,7 @@ h2 {
 }
 
 h2:after {
-  content: "";
+  content: '';
   display: block;
   background: var(--black);
   width: 8.5rem;
@@ -257,7 +257,7 @@ h4 {
 }
 
 #services h2:after {
-  content: "";
+  content: '';
   background: var(--white);
 }
 
@@ -333,7 +333,7 @@ h4 {
 
 /*Bottom Arrow*/
 .popup .popup-text::after {
-  content: " ";
+  content: ' ';
   position: absolute;
   top: 100%;
   /* At the bottom of the popup */
@@ -390,7 +390,7 @@ h4 {
 
 .popup-text ul li::before {
   color: var(--black);
-  content: "\2022";
+  content: '\2022';
   color: var(--red);
   font-size: 3rem;
   padding-right: 0.5rem;
@@ -440,13 +440,14 @@ h4 {
 /* isotope */
 
 .grid-item {
-  width: 50%;
 }
+.grid-item img {
 
+}
 .grid-item:hover img {
   opacity: 0.7;
   cursor: crosshair;
-  cursor: url("./img/more.png"), default;
+  cursor: url('./img/more.png'), default;
 }
 
 .grid-item .text {
@@ -566,7 +567,7 @@ h4 {
 }
 
 #clients h2:after {
-  content: "";
+  content: '';
   background: var(--white);
 }
 
@@ -715,7 +716,7 @@ h4 {
     flex-direction: row;
   }
   .grid-item {
-    width: 50%;
+    grid-template-columns: repeat(2, 1fr);
   }
   #services .icons-wrapper {
     justify-content: space-around;
@@ -743,7 +744,7 @@ h4 {
     justify-content: space-around;
   }
   .grid-item {
-    width: 33.33%;
+    grid-template-columns: repeat(3, 1fr);
   }
   .slide-head {
     grid-template-columns: repeat(4, auto);
@@ -763,7 +764,7 @@ h4 {
     justify-content: space-around;
   }
   .grid-item {
-    width: 25%;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .prev,
@@ -773,14 +774,14 @@ h4 {
 }
 
 @media screen and (min-width: 1920px) {
-/*For Projectors or Higher Resolution Screens (Full HD)*/
-    .container {
-        width: 1890px;
-    }
+  /*For Projectors or Higher Resolution Screens (Full HD)*/
+  .container {
+    width: 1890px;
+  }
 }
 @media screen and (min-width: 3840px) {
-/*For 4K Displays (Ultra HD)*/
-    .container {
-        width: 3810px;
-    }
+  /*For 4K Displays (Ultra HD)*/
+  .container {
+    width: 3810px;
+  }
 }

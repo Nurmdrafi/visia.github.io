@@ -202,6 +202,7 @@ h4 {
   color: var(--white);
   background-color: transparent;
   border: 0.1rem solid;
+  cursor: pointer;
 }
 
 #header-hero .box span {
@@ -211,6 +212,7 @@ h4 {
 #header-hero .box img {
   position: relative;
   bottom: -5px;
+  cursor: pointer;
 }
 
 /*=================
@@ -450,7 +452,8 @@ h4 {
   margin: 50px;
 }
 
-.filter-item, .button-group span {
+.filter-item,
+.button-group span {
   color: var(--orange);
   font-size: 17px;
   cursor: pointer;
@@ -461,7 +464,7 @@ h4 {
 .filter-item.active {
   color: var(--black);
 }
-.gallery-items{
+.gallery-items {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -491,20 +494,20 @@ h4 {
   font-style: italic;
 }
 
-.gallery .gallery-item.show{
-	animation: fadeIn 0.5s ease;
+.gallery .gallery-item.show {
+  animation: fadeIn 0.5s ease;
 }
-@keyframes fadeIn{
-	0%{
-		opacity: 0;
-	}
-	100%{
-		opacity: 1;
-	}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.gallery .gallery-item.hide{
-	display: none;
+.gallery .gallery-item.hide {
+  display: none;
 }
 
 /*=================
@@ -741,11 +744,26 @@ h4 {
 ==================*/
 
 @media (max-width: 575px) {
+  .navbar {
+    padding: 5rem 0;
+  }
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   .text-slider {
     height: 50px;
   }
   .text-slider h1 {
     font-size: 3rem;
+  }
+  .gallery-items {
+    grid-template-columns: 1fr;
+  }
+  .prev,
+  .next {
+    display: none;
   }
 }
 @media (min-width: 576px) {
@@ -790,10 +808,7 @@ h4 {
   .slide-head {
     grid-template-columns: repeat(4, auto);
   }
-  .prev,
-  .next {
-    display: none;
-  }
+  
 }
 
 @media (min-width: 992px) {
@@ -810,18 +825,5 @@ h4 {
   .prev,
   .next {
     display: inline-block;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  /*For Projectors or Higher Resolution Screens (Full HD)*/
-  .container {
-    width: 1890px;
-  }
-}
-@media screen and (min-width: 3840px) {
-  /*For 4K Displays (Ultra HD)*/
-  .container {
-    width: 3810px;
   }
 }

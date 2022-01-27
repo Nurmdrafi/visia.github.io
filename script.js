@@ -9,7 +9,7 @@ $(window).on('load', function () {
 /// Smooth scrolling /// ==>
 
 $('nav a').on('click', function () {
-  const scrollAnchor = $(this).attr('data-scroll'),
+  let scrollAnchor = $(this).attr('data-scroll'),
     scrollPoint =
       $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 65;
 
@@ -43,7 +43,7 @@ $(window).scroll(function () {
 
 /// TEXT SLIDER /// ==>
 
-const swiper = new Swiper('.text-slider', {
+let swiper = new Swiper('.text-slider', {
   direction: 'vertical',
   autoplay: {
     delay: 1800,
@@ -52,8 +52,8 @@ const swiper = new Swiper('.text-slider', {
 
 /// GALLERY FILTER /// ==>
 
-const filterContainer = document.querySelector(".gallery-filter");
-const galleryItems = document.querySelectorAll(".gallery-item");
+let filterContainer = document.querySelector(".gallery-filter");
+let galleryItems = document.querySelectorAll(".gallery-item");
 
 filterContainer.addEventListener("click", (event) =>{
   if(event.target.classList.contains("filter-item")){
@@ -64,7 +64,7 @@ filterContainer.addEventListener("click", (event) =>{
     // activate new 'filter-item'
     event.target.classList.add("active");
 
-    const filterValue = event.target.getAttribute("data-filter");
+    let filterValue = event.target.getAttribute("data-filter");
 
     galleryItems.forEach((item) =>{
 
@@ -85,7 +85,7 @@ filterContainer.addEventListener("click", (event) =>{
 
 /// CLIENT SLIDE SHOW /// ==>
 
-const slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -100,8 +100,8 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i;
-  const slides = document.getElementsByClassName('mySlides');
-  const dots = document.getElementsByClassName('dot');
+  let slides = document.getElementsByClassName('mySlides');
+  let dots = document.getElementsByClassName('dot');
   if (n > slides.length) {
     slideIndex = 1;
   }

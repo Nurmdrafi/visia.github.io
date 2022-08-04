@@ -121,6 +121,7 @@ h4 {
 
 .active {
   color: var(--orange);
+  font-weight: bold;
 }
 
 /*=================
@@ -204,6 +205,10 @@ h4 {
   border: 0.1rem solid;
   cursor: pointer;
 }
+#header-hero .box button:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
 
 #header-hero .box span {
   font-size: 1.7rem;
@@ -269,6 +274,7 @@ h4 {
   max-width: 62rem;
   margin: auto;
 }
+
 #services .icons-wrapper {
   max-width: 80%;
   margin: 0 auto;
@@ -277,54 +283,98 @@ h4 {
   grid-template-rows: repeat(3, auto);
   justify-content: space-around;
 }
+
+#services .icon-wrapper {
+  width: 6rem;
+  margin: 0 auto;
+}
 #services .icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 5rem 0;
-}
-#services .icon img {
-  margin-bottom: 4rem;
-  max-width: 8rem;
+  margin: 2rem 0;
+  width: 6rem;
+  height: 6rem;
 }
 
-#services .ux img:hover {
-  content: url(img/icons/ux-bottom.png);
+#services .service-name {
+  color: var(--white);
+  text-align: center;
+  font-weight: bold;
+}
+
+#services .ux {
+  background-image: url('img/icons/ux.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+#services .ux:hover {
+  background-position: bottom;
   cursor: help;
 }
 
-#services .design img:hover {
-  content: url(img/icons/design-bottom.png);
+#services .design {
+  background-image: url('img/icons/design.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+#services .design:hover {
+  background-position: bottom;
   cursor: help;
 }
 
-#services .seo img:hover {
-  content: url(img/icons/seo-bottom.png);
+#services .seo {
+  background-image: url('img/icons/seo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+#services .seo:hover {
+  background-position: bottom;
   cursor: help;
 }
 
-#services .social img:hover {
-  content: url(img/icons/social-bottom.png);
+#services .social {
+  background-image: url('img/icons/social.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+#services .social:hover {
+  background-position: bottom;
   cursor: help;
 }
 
-#services .tech img:hover {
-  content: url(img/icons/tech-bottom.png);
+#services .tech {
+  background-image: url('img/icons/tech.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+#services .tech:hover {
+  background-position: bottom;
   cursor: help;
 }
 
-#services .commerce img:hover {
-  content: url(img/icons/commerce-bottom.png);
+#services .commerce {
+  background-image: url('img/icons/commerce.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+#services .commerce:hover {
+  background-position: bottom;
   cursor: help;
 }
 
 #services .icon i:hover {
   background: var(--white);
   color: var(--orange);
-}
-
-#services .icon a:link {
-  text-decoration: none;
 }
 
 /*Top popup*/
@@ -353,7 +403,7 @@ h4 {
   transition: opacity 1s;
 }
 
-.popup:hover .popup-text {
+.icon:hover .popup-text {
   opacity: 0.8;
 }
 
@@ -373,11 +423,11 @@ h4 {
   /* Position the popup */
   position: absolute;
   z-index: 1;
-  bottom: 15rem;
+  bottom: 5rem;
   left: -7rem;
 }
 
-.popup:hover .popup-text {
+.icon:hover .popup-text {
   visibility: visible;
   padding-bottom: 0.2rem;
   padding: 0 0 0.2rem 0.5rem;
@@ -463,6 +513,7 @@ h4 {
 }
 .filter-item.active {
   color: var(--black);
+  font-weight: bold;
 }
 .gallery-items {
   display: grid;
@@ -808,7 +859,6 @@ h4 {
   .slide-head {
     grid-template-columns: repeat(4, auto);
   }
-  
 }
 
 @media (min-width: 992px) {

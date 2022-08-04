@@ -605,6 +605,7 @@ h4 {
   border-radius: 50%;
   border: 0.2rem solid var(--lightgray);
   color: var(--lightgray);
+  cursor: pointer;
 }
 
 #team .social i:hover {
@@ -633,6 +634,9 @@ h4 {
   grid-template-rows: repeat(2, auto);
   justify-content: space-around;
   margin-bottom: 1rem;
+}
+.slide-head img{
+  cursor: pointer;
 }
 .slide {
   display: flex;
@@ -767,6 +771,7 @@ h4 {
 
 #footer .social span {
   padding: 1rem;
+  cursor: pointer;
 }
 
 #footer .social i {

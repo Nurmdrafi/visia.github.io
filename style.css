@@ -492,14 +492,13 @@ h4 {
 .gallery {
   width: 100%;
   display: block;
-  padding: 100px 0;
 }
 
 .button-group {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin-bottom: 50px;
 }
 
 .filter-item,

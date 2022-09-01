@@ -79,7 +79,7 @@ h4 {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 999999;
 }
 
 .preloader-inner {
@@ -93,12 +93,17 @@ h4 {
   /* transform: translate(-50%, -50%); */
 }
 
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .navbar {
   font-size: 1.3rem;
-  height: 70px;
+  padding: 1.5rem;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -106,7 +111,7 @@ h4 {
   width: 10rem;
 }
 
-.nav-list {
+.nav-item {
   display: inline;
 }
 .nav-link {
@@ -122,6 +127,20 @@ h4 {
 .active {
   color: var(--orange);
   font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--black);
 }
 
 /*=================
@@ -634,7 +653,7 @@ h4 {
   justify-content: space-around;
   margin-bottom: 1rem;
 }
-.slide-head img{
+.slide-head img {
   cursor: pointer;
 }
 .slide {
@@ -795,18 +814,18 @@ h4 {
   color: var(--gray);
 }
 /*=================
-  Media Quaries
+  Media Queries
 ==================*/
 
 @media (max-width: 575px) {
-  .navbar {
+  /* .navbar {
     padding: 5rem 0;
   }
   .navbar-nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-  }
+  } */
   .text-slider {
     height: 50px;
   }
@@ -821,6 +840,7 @@ h4 {
     display: none;
   }
 }
+
 @media (min-width: 576px) {
   .text-slider {
     height: 50px;
@@ -865,6 +885,48 @@ h4 {
   }
 }
 
+/* Hamburger Menu Start */
+@media (max-width: 768px) {
+  .navbar-menu {
+    font-size: 1.5rem;
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    height: 92vh;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+/* Hamburger Menu End */
 @media (min-width: 992px) {
   .text-slider {
     height: 70px;
